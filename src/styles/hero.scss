@@ -1,0 +1,29 @@
+@import './main.scss';
+
+main{
+    background-image: url('../../public/assets/desktop/image-header.jpg');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    .#{&}-container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1{
+            margin-top: 70px;
+            font-family: $seconadary--fonts;
+            text-align: center;
+            color: $White;
+            letter-spacing: 5px;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+        img{
+            margin-top: 50px;
+            height: 100px;
+        }
+    }
+}
+
