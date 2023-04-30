@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import Hero from "./components/hero"
 import Body from './components/body'
 import Review from './components/review'
+import Footer from './components/footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,6 +14,7 @@ function App() {
       <Hero />
       <Body />
       <Review />
+      <Footer />
     </div>
   )
 }
