@@ -1,47 +1,171 @@
 @import './main.scss';
-.body{
-    height: 250vh;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
 
-    .body-first-card{
-        padding:  17% 20% 10% 17%;
-        .body-first-card-header{
-            font-family: $seconadary--fonts;
-            font-size: 1.7rem;
-            width: 300px;
+.body {
+    display: grid;
+    width: 100vw;
+    height: 220vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10fr 10fr 10fr;
+
+    @include ms {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 2fr 2fr;
+        height: 250vh;
+    }
+
+    .body-first-card {
+        width: 100%;
+        height: 100%;
+        padding: 15% 0 0 15%;
+        grid-column: 1 /1;
+        grid-row: 2 / 3;
+        @include ms {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
-        .body-first-card-paragraph{
+
+        .body-first-card-header {
+            font-family: $seconadary--fonts;
+            font-size: 1.3rem;
+            max-width: 250px;
+            letter-spacing: 1px;
+            @include ms {
+                text-align: center;
+            }
+            
+        }
+
+        .body-first-card-paragraph {
             font-size: 0.8rem;
+            color: $Dark-grayish-blue;
+            font-weight: 600;
             line-height: 1.3rem;
             margin-top: 30px;
+            max-width: 300px;
+            @include ms {
+                text-align: center;
+            }
         }
-        .body-last-card-paragraph{
+
+        .body-last-card-paragraph {
             margin-top: 15%;
             font-weight: 700;
             text-transform: capitalize;
             font-family: $seconadary--fonts;
+            @include ms {
+                text-align: center;
+            }
         }
     }
-    .body-second-card{
-      background-image: url('/assets/desktop/image-transform.jpg');
-      background-size: cover;
+
+    .body-second-card {
+        background-image: url('/assets/desktop/image-transform.jpg');
+        background-size: cover;
+        background-position: center;
+        grid-column: 1 / 1;
+        grid-row: 1 / 2;
+
+        @include ms {
+            background-image: url('/assets/mobile/image-transform.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
     }
-    .body-third-card{
-       background-image: url('/assets/desktop/image-stand-out.jpg');
-       background-size: cover;
+
+    .body-third-card {
+        background-image: url('/assets/desktop/image-stand-out.jpg');
+        background-size: cover;
+        background-position: center;
+        grid-row: 3 / 4;
+
+        @include ms {
+            background-image: url('/assets/mobile/image-stand-out.jpg');
+            background-size: cover;
+            background-position: center;
+        }
     }
-    .body-fourth-card{
-        
+
+    .body-fourth-card {
+        @extend .body-first-card;
+        grid-row: 4 /5;
+        grid-column: 1 /1 ;
+
+        .body-first-card-header {
+            max-width: 350px;
+        }
     }
-    .body-fifth-card{
+
+    .body-fifth-card {
         background-image: url('/assets/desktop/image-graphic-design.jpg');
         background-size: cover;
+        background-position: center;
+        height: 100%;
+        grid-row: 5 /6;
+        grid-column: 1 /1;
+
+        @include ms {
+            background-image: url('/assets/mobile/image-graphic-design.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+
+            .card-wapper {
+                .image-card-header {
+                    padding-bottom: 20px;
+                    font-size: 1rem;
+                    color: $Dark-cyan-graphic-design-text;
+                    font-family: $seconadary--fonts;
+                    text-transform: capitalize;
+                    text-align: center;
+                }
+
+                .image-card-paragragh {
+                    max-width: 450px;
+                    margin-bottom: 20px;
+                    text-align: center;
+                    font-size: 0.8rem;
+                    height: 100%;
+                    color: $Dark-cyan-graphic-design-text;
+                    font-weight: 600;
+                    line-height: 17px;
+                }
+            }
+        }
     }
-    .body-sixith-card{
-      background-image: url('/assets/desktop/image-photography.jpg');
-      background-size: cover;
+    .body-sixith-card {
+        background-image: url('/assets/desktop/image-photography.jpg');
+        background-size: cover;
+        background-position: top;
+        @extend .body-fifth-card;
+        .card-container{
+            .card-wapper{
+                .image-card-paragragh{
+                    max-width: 300px;
+                }
+            }
+        }
+        .card-wapper {
+            .image-card-header {
+                color: $Dark-blue-photography-text;
+            }
+        }
+        @include ms {
+            background-image: url('/assets/mobile/image-photography.jpg');
+            background-size: cover;
+            background-position: top;
+            grid-row: 6 / 7;
+        }
     }
 }

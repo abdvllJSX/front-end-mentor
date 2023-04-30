@@ -6,10 +6,10 @@
     box-sizing: border-box;
     font-size: 18px;
 }
-
-html{
-    overflow-x: hidden;
-}
 body{
     font-family: $primary--fonts;
+    overflow-x: none;
+}
+html{
+    overflow-x: none;
 }

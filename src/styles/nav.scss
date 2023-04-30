@@ -16,6 +16,9 @@ nav{
         align-items: center;
         column-gap: 30px;
         list-style: none;
+        @include ms{
+            display: none;
+        }
         .nav-links{
             text-transform: capitalize;
             font-size: 0.8rem;
@@ -33,6 +36,13 @@ nav{
                 font-size: 0.7rem;
                 padding: 10px;
             }
+        }
+    }
+
+    .hamburger{
+        display: none;
+        @include ms{
+            display: block;
         }
     }
 }

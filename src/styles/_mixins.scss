@@ -2,3 +2,8 @@
     $remValue: (calc(100vh / 16) * $value) + rem;
     @return $remValue;
 }
+@mixin ms {
+    @media(max-width: $mobile) {
+        @content;
+    }
+}

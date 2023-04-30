@@ -2,37 +2,67 @@
 
 .footer {
     display: grid;
-    height: 100vh;
     width: 100vw;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 4fr 3fr;
+    @include ms {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 4fr 4fr 5fr;
+    }
 
     .image-1 {
         background-image: url('/assets/desktop/image-gallery-milkbottles.jpg');
         background-size: cover;
+
+        @include ms {
+            background-image: url('/assets/mobile/image-gallery-milkbottles.jpg');
+            background-size: cover;
+            background-position: center;
+            
+            
+        }
     }
 
     .image-2 {
         background-image: url('/assets/desktop/image-gallery-orange.jpg');
-        @extend .image-1
+        @extend .image-1;
+        @include ms {
+            background-image: url('/assets/mobile/image-gallery-orange.jpg');
+            background-size: cover;
+            background-position: center;
+        }
     }
 
     .image-3 {
         background-image: url('/assets/desktop/image-gallery-cone.jpg');
-        @extend .image-1
+        @extend .image-1;
+        @include ms {
+            background-image: url('/assets/mobile/image-gallery-cone.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
     }
 
     .image-4 {
         background-image: url('/assets/desktop/image-gallery-sugarcubes.jpg');
-        @extend .image-1
+        @extend .image-1;
+
+        @include ms {
+            background-image: url('/assets/mobile/image-gallery-sugar-cubes.jpg');
+        }
     }
 
     footer {
         background-color: $Dark-light-cyan-footer;
         grid-column: 1 / 5;
+        @include ms {
+          grid-column: 1 / 3;
+        }
 
         .footer-container {
             padding: 30px 50px;
+
             .footer-header {
                 text-align: center;
                 font-family: $primary--fonts;
@@ -51,6 +81,7 @@
                 list-style: none;
                 column-gap: 50px;
                 align-items: center;
+
                 .footer-links {
                     font-size: 0.7rem;
                     font-weight: 600;
@@ -60,11 +91,11 @@
                 }
             }
 
-            .footer-media-items{
+            .footer-media-items {
                 @extend .footer-items;
                 column-gap: 20px;
 
-                .footer-media-links{
+                .footer-media-links {
                     @extend .footer-links;
                 }
             }
