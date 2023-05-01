@@ -11,7 +11,7 @@ export default function Body() {
                     we are full service creative agency specializing
                     in helping brands grow fast. engage your clients
                     through compelling visuals that do more of marketing
-                    for
+                    for you.
                 </p>
 
                 <p className="body-last-card-paragraph">

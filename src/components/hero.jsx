@@ -11,7 +11,6 @@ export default function Hero() {
                 <h1 className="main-container-header">
                     we are creatives
                 </h1>
-
                 <img src={arrowDown} alt="" />
             </div>
         </main>
