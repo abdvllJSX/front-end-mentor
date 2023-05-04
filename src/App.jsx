@@ -7,7 +7,6 @@ import Review from './components/review'
 import Footer from './components/footer'
 import './styles/app.scss'
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="app-container">
