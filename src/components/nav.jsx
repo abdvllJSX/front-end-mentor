@@ -8,7 +8,7 @@ export default function Nav(props){
             <div className="logo">
                <img src={logo} alt="" />
             </div>
-            <ul className={props.open ? "nav-items" : "nav-items nav-close"}>
+            <ul className={props.open ? "nav-items":"nav-items nav-close" }>
                 <li className="nav-links">about</li>
                 <li className="nav-links">service</li>
                 <li className="nav-links">projects</li>
